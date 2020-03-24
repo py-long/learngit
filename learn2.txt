@@ -22,6 +22,13 @@
 	git checkout ==git switch
 	不同点:
 	创建+切换分支：git checkout -b <name>或者git switch -c <name>
+
 	
 	分支和master都进行了操作:
+	git merge branch name 会报错
+	cat file   查看内容，会进行详细显示
+	
+	此时我们修改后再保存
+	git log 查看合并情况
+
 	
