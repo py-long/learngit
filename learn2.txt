@@ -1,4 +1,5 @@
 分支控制:
+	只有分支进行操作时:
 	git checkout -b name
 	相当于:
 		git branch name
@@ -17,4 +18,10 @@
 	
 	然后可以删除分支:
 	git branch -d name
+	
+	git checkout ==git switch
+	不同点:
+	创建+切换分支：git checkout -b <name>或者git switch -c <name>
+	
+	分支和master都进行了操作:
 	
