@@ -28,7 +28,8 @@
 	git merge branch name 会报错
 	cat file   查看内容，会进行详细显示
 	
-	此时我们修改后再保存
+	此时我们修改后再保存(也可以直接add 然后commit)
 	git log 查看合并情况
+	git log --graph命令可以看到分支合并图
 
 	

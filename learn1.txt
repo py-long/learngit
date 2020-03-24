@@ -1,4 +1,10 @@
 Git 是一个版本控制系统!
+cd 进入目录
+cd ..返回上一级目录  （cd和..中间有空格）
+
+Git登陆:
+	git config --global user.name ""
+	git config --global user.email ""
 创建版本库的一系列命令：
 	cd E:\Git
 	mkdir +name
@@ -52,9 +58,19 @@ git 分为工作区和暂存区:
 
 
 远程仓库:
+	一:
 	$ ssh-keygen -t rsa -C "email"   获取一个 .ssh文件夹，里面有.id_rsa(私匙) .id_rsa_pub(公)
 	github-settings-sshkey-new shh key
+	'''
+	$ git remote add origin git@github.com:py-long/learngit
 	$ git remote add origin https://github.com/账户名/仓库
+	'''这两种效果一样
 	$ git push -u origin master  (这个一定要在仓库目录下，不然会报错)
 	完成
 	后面就使用 git push origin master 推送就好了
+
+	二:
+	先在GitHub创建仓库,勾选 Initialize this repository with a README
+	$ git clone git@github.com:py-long/gitskills.git
+	
+	Git支持多种协议，包括https，但ssh协议速度最快。（两种不同的写法）
