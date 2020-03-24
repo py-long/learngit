@@ -18,3 +18,7 @@
 	然后可以删除分支:
 	git branch -d name
 	
+	git checkout ==git switch
+	不同点:
+	创建+切换分支：git checkout -b <name>或者git switch -c <name>
+	
