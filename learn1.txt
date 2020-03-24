@@ -1,0 +1,7 @@
+Git 是一个版本控制系统!
+创建版本库的一系列命令：
+	cd E:\Git
+	mkdir +name
+	cd name
+	git init 初始化
+	pwd 查看当前工作路径
