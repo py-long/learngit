@@ -1,0 +1,20 @@
+分支控制:
+	git checkout -b name
+	相当于:
+		git branch name
+		git checkout name
+	git branch   查看当前分支
+	
+	在分支内进行工作，然后进行提交:
+	git add xxx
+	git commit -m ""
+	
+	分支工作完后回到master：
+	git checkout master
+	
+	把分支工作成果合并到master
+	git merge 分支name
+	
+	然后可以删除分支:
+	git branch -d name
+	
