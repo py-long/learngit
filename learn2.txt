@@ -32,4 +32,35 @@
 	git log 查看合并情况
 	git log --graph命令可以看到分支合并图
 
+	git merge --no-ff -m "说明" branch name
+	合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，
+	而fast forward合并就看不出来曾经做过合并。
+	
+	分支工作未完成，却需要进行另一个分支工作:
+	git stash   可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+	然后切换到需要建立分支工作的地方进行操作，完成后合并，删除分支
+	回到之前工作的分支:
+	git switch branch name
+	git stash list   查看工作现场存储地方
+	然后进行恢复:
+	一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除
+	另一种方式是用git stash pop，恢复的同时把stash内容也删了
+	再用git stash list查看，就看不到任何stash内容了。
+	
+	可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash，用命令：
+	git stash apply stash@{0}
+
+	如果在刚刚那个分支的修改，想在本分支也进行修改:
+	Git专门提供了一个cherry-pick命令，让我们能复制一个特定的提交到当前分支:
+	git cherry-pick 那个分支的commit id 
+	
+	如果刚刚那个分支完成后，还没有合并到本分支，却需要删除：
+	git branch -d branch name   会删除失败
+	git branch -D branch name   强制删除
+	
+
+
+
+
+
 	
