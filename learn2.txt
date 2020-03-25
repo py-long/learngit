@@ -58,7 +58,57 @@
 	git branch -d branch name   会删除失败
 	git branch -D branch name   强制删除
 	
+	git remote   查看远程控制
+	在master的分支dev上面工作时：
+		另一个人想要clone，
+		git clone git@github.com:py-long/learngit.git  只能clone master而没有dev
+		可以用 git branch查看
+		他想在dev上面工作的话:
+			git checkout -b dev origin/dev  创建本地dev分支
+		
+		如果他做的内容已经提交了，恰巧我的东西也做好了，提交就会出错：
+			git pull
+		先用git pull把最新的提交从origin/dev抓下来，然后，在本地合并，解决冲突，再推送
+		如果git pull 失败了：
+			原因是没有指定本地分支与远程分支的链接
+			根据提示，设置dev和origin/dev的链接
+		模板:
+		git branch --set-upstream-to=origin/<branch> dev
+		然后再pull
+		
+		
+git标签：
+	git tag name  当前分支打标签
+	 git tag 查看所有标签
+	 
+	 （git log --graph --pretty=oneline --abbrev-commit） 
+	 git log --pretty=oneline --abbrev-commit  查找历史提交的commit id
+	 
+	 git tag <name> <commit id>  对历史修改的一次打标签
+	 
+	 git show <tagname> 查看标签信息
+	 
+	 创建带有说明的标签:
+		git tag -a <tagname> -m "" <commit id>
+	-a 指定标签名
+	
+	删除本地标签:
+		git tag -d <tagname>
+	
+	推送某个标签到远程:
+		git push origin <tagname>
+	推送全部标签到远程:
+		git push origin --tags
+	
+	 删除远程标签:
+		git tag -d <tagname>
+		git push origin :refs/tags/<tagname>
+		
 
+忽略文件:
+	在工作区建立一个 .gitignore 文件
+	git check-ignore -v <name>   查看规则哪儿有错误
+	
 
 
 

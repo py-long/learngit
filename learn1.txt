@@ -20,12 +20,15 @@ Git登陆:
 	git status   查看当前文件的状态
 	git diff    如果被修改，查看修改的内容
 	git add name
+	git add -f <name> 强制添加
 	(git status)
 	git commit -m ""
 	(git status)
 查看历史：
 	git log
 	(git log --pretty=oneline)  简洁显示
+	
+	git rebase  可以把历史分支变得好看
 查看文件内容:
 	cat name
 回到之前修改版本：
@@ -58,6 +61,9 @@ git 分为工作区和暂存区:
 
 
 远程仓库:
+	
+	github
+	
 	一:
 	$ ssh-keygen -t rsa -C "email"   获取一个 .ssh文件夹，里面有.id_rsa(私匙) .id_rsa_pub(公)
 	github-settings-sshkey-new shh key
@@ -74,3 +80,21 @@ git 分为工作区和暂存区:
 	$ git clone git@github.com:py-long/gitskills.git
 	
 	Git支持多种协议，包括https，但ssh协议速度最快。（两种不同的写法）
+	
+    删除关联的远程库：
+		git remote rm <name>   如 git remote rm origin
+	
+	
+	gitee   (github镜像)
+	
+	操作方法类似
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
