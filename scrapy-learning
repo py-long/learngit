@@ -1,0 +1,26 @@
+创建scrapy框架
+	打开cmd，cd到想创建的位置，scrapy startproject 项目名
+		可加参数（参数查看，scrapy startproject -h）  （--nolog  不输出日志文件）
+		常用 scrapy startproject --logfile='自己取名字' --loglevel=DEBUG（五个等级，按照需求选择）项目名
+	scrapy常用工具命令（分全局命令，项目命令）查看   scrapy -h 
+	  全局命令
+		1.fetch命令：显示爬取对应网址的过程
+			scrapy fetch 网址（http://www.baidu.com）
+			fetch命令里面也有参数设置，自行查看
+		2.runspider
+		3.shell
+		4.view
+	  项目命令
+	    1.scrapy bench：测试本地硬件的性能 
+		2.genspider：创建scrapy爬虫文件（快速创建的方式）
+			scrapy genspider -l 查看当前可以使用的爬虫模板
+			scrapy genspider -t 使用的爬虫模板名 建立的新模板名 新爬取的域名
+		3.check
+		4.crawl
+		5.list
+		
+	Item的编写：
+		name=scrapy.Field()
+		
+		class nameItem(scrapy.Item):
+			name=scrapy.Field()
